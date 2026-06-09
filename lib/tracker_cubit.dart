@@ -35,7 +35,7 @@ class TrackerCubit extends Cubit<TrackerState> {
 
     if (state.isRunning) {
 
-      Map<String, dynamic> apiPayload = prepareApiPayload(status: "COMPLETED");
+      Map<String, dynamic> apiPayload = prepareApiPayload(status: "Interval");
       print("🚀 READY FOR API POST REQUEST: $apiPayload");
 
       await prefs.remove('native_anchor_time');
