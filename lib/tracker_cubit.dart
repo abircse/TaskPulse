@@ -78,6 +78,7 @@ class TrackerCubit extends Cubit<TrackerState> {
     _gpsSubscription = Geolocator.getPositionStream(
       locationSettings: AndroidSettings(
         accuracy: LocationAccuracy.medium,
+        // below two param any one you can use based on your project requirement
         distanceFilter: 40, // Collects new coordinates when moving past 40 meters
         //intervalDuration: const Duration(seconds: 30), // Force a strict time configuration interval (e.g., 30 seconds)
         foregroundNotificationConfig: const ForegroundNotificationConfig(
